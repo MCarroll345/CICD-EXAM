@@ -19,7 +19,7 @@ public class Product {
     private String productCode;
 
     @NotBlank(message = "Error")
-    @Max(value = 100, message = "Error")
+    @Size(max = 100, message = "Error")
     private String productName;
 
     @NotBlank(message = "Error")
