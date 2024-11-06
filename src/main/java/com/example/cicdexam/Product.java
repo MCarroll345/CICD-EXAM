@@ -16,21 +16,20 @@ import javax.annotation.processing.SupportedOptions;
 
 public class Product {
 
-    @UniqueElements(message = "Not unique")
-    @Pattern(regexp = "")
+    @UniqueElements(message = "Code is not unique")
     private String productCode;
 
-    @NotBlank(message = "Error")
-    @Size(max = 100, message = "Error")
+    @NotBlank(message = "Name cannot be blank")
+    @Size(max = 100, message = "Name too large")
     private String productName;
 
-    @NotBlank(message = "Error")
+    @NotBlank(message = "Category cannot be blank")
     private String category;
 
-    @PositiveOrZero(message = "Error")
+    @PositiveOrZero(message = "Stock cannot be zero")
     private int quantitityInStock;
 
-    @Positive(message = "Error")
+    @Positive(message = "Price cannot be zero or lower")
     private float price;
 
 }
